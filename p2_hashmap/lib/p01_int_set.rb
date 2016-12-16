@@ -5,19 +5,27 @@ class MaxIntSet
 
   def insert(num)
     validate!(num)
+    @store[num] = true;
   end
 
   def remove(num)
     validate!(num)
+    @store[num] = false;
   end
 
   def include?(num)
     validate!(num)
+    @store[num]
   end
 
   private
 
   def is_valid?(num)
+    if (num >= 0 && num <= @store.length)
+      return true
+    end
+
+    return false
   end
 
   def validate!(num)
