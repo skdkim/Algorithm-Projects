@@ -40,18 +40,25 @@ class IntSet
   end
 
   def insert(num)
+    @store[num % 20] = num
   end
 
   def remove(num)
+    @store[num % 20] = nil
   end
 
   def include?(num)
+    if @store[num % 20] == num
+      return true
+    end
+    return false;
   end
 
   private
 
   def [](num)
     # optional but useful; return the bucket corresponding to `num`
+    @store[num]
   end
 
   def num_buckets
