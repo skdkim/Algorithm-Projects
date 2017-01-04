@@ -1,38 +1,3 @@
-# require_relative 'heap2'
-#
-# class PriorityMap
-#   def initialize(&prc)
-#   end
-#
-#   def [](key)
-#   end
-#
-#   def []=(key, value)
-#   end
-#
-#   def count
-#   end
-#
-#   def empty?
-#   end
-#
-#   def extract
-#   end
-#
-#   def has_key?(key)
-#   end
-#
-#   protected
-#   attr_accessor :map, :queue
-#
-#   def insert(key, value)
-#   end
-#
-#   def update(key, value)
-#   end
-# end
-
-
 require_relative 'heap2'
 
 class PriorityMap
@@ -93,16 +58,3 @@ class PriorityMap
     nil
   end
 end
-
-# TESTING
-
-def main
-  pm = PriorityMap.new { |value1, value2| value1 <=> value2 }
-  pm["A"] = 10
-  pm["B"] = 15
-  pm["B"] = 5
-
-  p pm
-end
-
-main if __FILE__ == $PROGRAM_NAME
